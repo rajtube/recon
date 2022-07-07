@@ -1,0 +1,60 @@
+#!/bin/bash
+
+#getting linux update
+apt-get update
+#installing design tools
+apt-get install figlet toilet
+cd
+cd Downloads
+
+#install go language
+wget https://go.dev/dl/go1.18.3.linux-amd64.tar.gz
+tar -C /usr/local/ -xzf go1.18.3.linux-amd64.tar.gz
+
+#setting go path environmental variable
+export GOPATH=/usr/local
+export GOROOT=/usr/local/go
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+echo 'export GOPATH=/usr/local' >> ~/.zshrc
+echo 'export GOROOT=/usr/local/go' >> ~/.zshrc
+echo 'PATH=$PATH:$GOROOT/bin:$GOPATH/bin' >> ~/.zshrc
+figlet go installation completed
+
+echo "run: source ~/.zshrc"
+
+
+
+
+
+
+
+
+#!/bin/bash
+
+figlet installing subdomain finder
+#installing subdomains finder tool
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+figlet installing service finder tool
+#installing service finder tool
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+figlet installing spidering tool
+#installing gospider tool
+GO111MODULE=on go install github.com/jaeles-project/gospider@latest
+figlet installation screentshotting tool
+#installing screentshotting tool
+wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
+#unzipping the screenshotting tool
+unzip aquatone_linux_amd64_1.7.0.zip -d /usr/local/bin
+
+figlet installation completed
+
+
+
+
+
+
+
+
+
+
+
