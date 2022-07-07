@@ -29,24 +29,6 @@ echo "run: source ~/.zshrc"
 
 
 
-#!/bin/bash
-
-figlet installing subdomain finder
-#installing subdomains finder tool
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-figlet installing service finder tool
-#installing service finder tool
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-figlet installing spidering tool
-#installing gospider tool
-GO111MODULE=on go install github.com/jaeles-project/gospider@latest
-figlet installation screentshotting tool
-#installing screentshotting tool
-wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip
-#unzipping the screenshotting tool
-unzip aquatone_linux_amd64_1.7.0.zip -d /usr/local/bin
-
-figlet installation completed
 
 
 
